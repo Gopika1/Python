@@ -1,23 +1,33 @@
-class Rectangle:
-    def __init__(self,breadth,length):
-        self.breadth = breadth
-        self.length  = length
+class Rectangle():
+    def __init__(self, l, w):
+        self.__length = l
+        self.__width  = w
+
     def area(self):
-        return self.breadth * self.length
+        return self.__length*self.__width
 
-    def __lt__(self, other):
-        return self.rect1 < other.rect2
+    def __lt__(self):
+        if (rec1 < rec2):
+            print("Area of Rectangle 1 is less than Rectangle 2")
+        else:
+            print("Area of Rectangle 2 is greater than Rectangle 1")
+
 print("Rectangle 1")
-a = int(input("enter the length: "))
-b = int(input("enter the breadth: "))
-obj1 = Rectangle(a,b)
-print("Area of the Rectangle 1 : ",obj1.area())
-print("Rectangle 2")
-a = int(input("enter the length: "))
-b = int(input("enter the breadth: "))
-obj2 = Rectangle(a,b)
-print("Area of the Rectangle 2: ",obj2.area())
-rect1 = obj1.area()
-rect2 = obj2.area()
+a=int(input("enter the length:"))
+b= int(input("enter the breadth:"))
+obj=Rectangle(a,b)
 
-r.__lt__(rect1,rect2)
+print("Area 1 = ",obj.area())
+
+print("Rectangle 2")
+a=int(input("enter the length:"))
+b= int(input("enter the breadth:"))
+ob=Rectangle(a,b)
+print("Area 2= ",ob.area())
+
+#compairing
+
+rec1 = obj.area()
+rec2 = ob.area()
+obje=Rectangle(rec1,rec2)
+obje.__lt__()
